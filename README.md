@@ -1,2 +1,2 @@
-# xin-code.github.io
-个人网页
+# 个人博客
+https://xin-code.github.io/
