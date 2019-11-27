@@ -6,3 +6,10 @@
     <content type="text"><![CDATA[一个网易音乐外链地址长期有效，很简单的方法：第一步：打开网易云音乐，随便找到一首歌，播放，复制网址的ID第二步：http://music.163.com/song/media/outer/url?id=数字.mp3]]></content>
   </entry>
 </search>
+<search>
+  <entry>
+    <title><![CDATA[windows10中关闭Windows Defender]]></title>
+    <url>/blog/2019/11/20/windows10中关闭Windows%20Defender</url>
+    <content type="text"><![方法/步骤1：通过Windows Defender设置临时关闭  方法/步骤2：通过修改注册表，永久禁用Windows Defender  方法/步骤3：通过组策略禁用Windows Defender]]></content>
+  </entry>
+</search>

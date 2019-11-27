@@ -142,7 +142,7 @@
               日志
             </a>
           </li>
-  
+ 
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
@@ -197,98 +197,13 @@
 
 
 <!--文章插入开始-->
+<!--与blog相似部分可直接复制-->
 <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/blog/2019/11/19/网易云音乐mp3外链、真实地址下载方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="大宝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/大宝头像.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="大宝的博客">
-    </span>
-
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="https://xin-code.github.io/blog/2019/11/19/网易云音乐mp3外链、真实地址下载方法/" itemprop="url">网易云音乐mp3外链、真实地址下载方法</a></h1>
-
-        <div class="post-meta">
-           
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T00:00:00+08:00">
-                2019-11-19
-              </time>
- 
-          </span>
-              <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/公众号/" itemprop="url" rel="index">
-                    <span itemprop="name">公众号</span>
-                  </a>
-                </span>
-              
-            </span>
-          
-        </div>
-      </header>
-
-    
-    <div class="post-body" itemprop="articleBody">
-
-      <p>一个网易音乐外链地址长期有效，很简单的方法：</p>
-      <p>第一步：打开网易云音乐，随便找到一首歌，播放，复制网址的ID</p>
-      <p>第二步：http://music.163.com/song/media/outer/url?id=数字.mp3</p>
-      
-                <!--noindex-->
-                <div class="post-button text-center">
-                  <a class="btn" href="/blog/2019/11/19/网易云音乐mp3外链、真实地址下载方法/#more" rel="contents">
-                    阅读全文 &raquo;
-                  </a>
-                </div>
-                <!--/noindex-->
-      
-          </div>
-          
-          <footer class="post-footer">
-      
-          <div class="post-eof"></div>
-            
-          </footer>
-        </div>
-        
-        </article>
-          
-      <!--文章插入结束-->  
-
-<article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/blog/2019/11/20/windows10中关闭Windows Defender">
+    <link itemprop="mainEntityOfPage" href="http://xin-code.github.io/blog/2019/11/20/windows10中关闭Windows Defender">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大宝">
@@ -340,22 +255,42 @@
           
         </div>
       </header>
-
+<!--与blog相似部分可直接复制-->
     
     <div class="post-body" itemprop="articleBody">
 
+<h1><a style="color: red;">方法/步骤1：</a>通过Windows Defender设置临时关闭</h1>
+<p>打开Windows Defender操作界面在“病毒和威胁防护”设置界面，关闭“实时保护”，关闭“云提供的保护”，关闭“自动提交样本”这三项。</p>
+<p>如果按钮是灰色无法修改，那么可能你的第三方软件已通过其他方式为您已经关闭了</p>
+<img src="/images/Windows defender关闭（1）.png">
+<hr >
+<h1><a style="color: red;">方法/步骤2：</a>通过修改注册表，永久禁用Windows Defender</h1>
+<p>打开注册表编辑器。</p>
+<p>按 Win +R键入regedit，点击确定。</p>
+<p>定位需要修改的注册表</p>
+<p>其路径如下</p>
+<p><a style="color: red;">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender</a></p>
+<img src="/images/Windows defender关闭（2）.png">
+<p>创建DWORD（32位）注册表值。</p>
+<p>右侧空白区域右键-新建-DWORD（32位）值，命名它为DisableAntiSpyware。</p>
+<p>修改数值为1，因0代表启用，1代表禁用。</p>
+<p>点确定关闭注册表。</p>
+<p>重启电脑Windows Defender已经不会在开机启动了。</p>
+<hr >
+<h1><a style="color: red;">方法/步骤3：</a>通过组策略禁用Windows Defender</h1>
+<p>打开本地组策略编辑器应用程序</p>
+<p>还是按下Win+R键，输入gpedit.msc，打开组策略窗口。</p>
+<img src="/images/Windows defender关闭（3）.png">
+<p>找到windows Defender选项</p>
+<p>计算机配置-管理模板-windows组件-windows defender-关闭windows defender</p>
+<img src="/images/Windows defender关闭（4）.png">
+<p>在右侧选择关闭windows defender防病毒程序，打开 选择 启用，确定！</p>
+<p>如果没有立刻关闭，请重启电脑或者刷新策略组。</p>
+<p>注意：禁用:是开启，启用:是关闭。</p>
 
-<p>方法/步骤1：通过Windows Defender设置临时关闭</p>
-<p>方法/步骤2：通过修改注册表，永久禁用Windows Defender</p>
-<p>方法/步骤3：通过组策略禁用Windows Defender</p>
 
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/2019/11/20/windows10中关闭Windows Defender/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+
 
     </div>
     
@@ -375,13 +310,11 @@
 
 
 
+
+
+
 </section>
 
-<!--页数显示-->
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-<!--页数结束-->
           </div>
         </div>
 <!--盒子结束-->
@@ -425,33 +358,6 @@
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">0</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">0</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
 
           
             <div class="links-of-author motion-element">
