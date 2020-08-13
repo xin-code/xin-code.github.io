@@ -8,24 +8,33 @@ a {
     color: black;
 }
 
-.welcome {
-    margin: 100px;
+body {
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
 }
 
 .welcome h1 {
     text-align: center;
 }
 
-.project {
+.all {
     display: flex;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+}
+
+.project {
+    width: 20%;
+    background-color: pink;
+    margin: 12px 2px;
 }
 
 .project a {
-    margin: 0 2px;
     display: block;
-    background-color: pink;
-    padding: 10px 20px;
-    text-align: center;
+    background-color: #ccc;
+}
+
+.project p {
+    padding: 10px;
 }
