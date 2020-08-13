@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.welcome {
+    margin: 100px;
+}
+
+.welcome h1 {
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.project a {
+    margin: 0 2px;
+    display: block;
+    background-color: pink;
+    padding: 10px 20px;
+    text-align: center;
+}
