@@ -20,13 +20,11 @@ body {
 }
 
 .all {
-    display: flex;
     text-align: center;
 }
 
 .project {
-    width: 20%;
-    background-color: pink;
+    background-color: #fff;
     margin: 12px 2px;
 }
 
@@ -37,4 +35,5 @@ body {
 
 .project p {
     padding: 10px;
+    border: 1px solid #ccc;
 }
