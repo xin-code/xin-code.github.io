@@ -1,0 +1,12 @@
+{
+  "name": "xin-code.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:xin-code/xin-code.github.io.git",
+  "author": "Xin <975203723@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev" :"vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
