@@ -1,12 +1,22 @@
 {
   "name": "xin-code.github.io",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "git@github.com:xin-code/xin-code.github.io.git",
-  "author": "Xin <975203723@qq.com>",
-  "license": "MIT",
   "scripts": {
-    "docs:dev" :"vuepress dev docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xin-code/xin-code.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xin-code/xin-code.github.io/issues"
+  },
+  "homepage": "https://github.com/xin-code/xin-code.github.io#readme"
 }
