@@ -1,2 +1,4 @@
 node_modules
 .vscode
+blog/.vuepress/.cache
+blog/.vuepress/.temp
