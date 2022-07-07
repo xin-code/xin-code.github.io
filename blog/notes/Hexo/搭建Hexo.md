@@ -1,0 +1,90 @@
+---
+title: 搭建Hexo
+icon: page
+date: 2022-03-24 18:53:30
+category:
+  - Hexo
+tag:
+  - Hexo
+sticky: false
+star: false
+---
+
+Hexo博客的准备、创建、部署。
+
+<!-- more -->
+
+
+
+# 准备
+
+1. 安装Nodejs 使用命令node -v查看是否安装完成
+
+2. 安装npm 使用命令npm -v查看是否安装完成
+3. 安装git 使用git --version查看是否安装完成
+4. 注册好github帐号
+5. 创建密钥，建立与github的链接
+
+
+
+# 创建Hexo
+
+1. 创建一个空的文件夹，比如blog,用放hexo的产生的源代码,进入blog文件夹
+
+2. 使用命令全局安装hexo `npm i hexo-cli -g`
+
+3. 初始化hexo `hexo init`  `文件夹名 install`
+
+4. 本地创建一个博客  `hexo new "博客名"`（创建博客）    `hexo g`（生成网页）
+
+5. 本地查看 hexo s（打开服务器）
+
+
+
+# 部署Github
+
+![hexo部署github配置项.png](https://s2.loli.net/2022/03/11/9pS5cLYPWqyOkxo.png)
+
+1. repo 填写Http 仓库地址
+
+2. branch 填写需要部署的分支
+
+3. ERROR Deployer not found: git
+
+   ```
+   npm install --save hexo-deployer-git
+   ```
+
+4. 启动项目
+
+   ```
+   hexo clean（清除缓存文件，比如换主题就需要这个命令）
+   hexo g（生成静态文件） --┑
+                           |---> hexo g -d
+   hexo d（发布到github）--┙
+   ```
+   
+5. 部署项目中出现卡顿现象
+
+   ```
+   // 走代理
+   git config --global http.proxy 'socks5://127.0.0.1:10808'
+   git config --global https.proxy 'socks5://127.0.0.1:10808'
+   // 取消代理
+   git config --global --unset http.proxy
+   git config --global --unset https.proxy
+   ```
+
+   
+
+# 文档
+
+1. 创建新的Markdown文件
+
+   ```
+   hexo n 文件名(可中文英文,自动生成md文件) 
+   hexo new post 名称(简写/具体md文件名)
+   ```
+
+   
+
