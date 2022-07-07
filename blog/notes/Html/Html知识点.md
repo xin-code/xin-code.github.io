@@ -18,7 +18,7 @@ star: false
 
 ## 页面获取getElementsByClassName()并对其操作
 
-- 报错<font color='red'>Uncaught TypeError: document.getElementsByClassName(...).方法名is not a function</font>
+- 报错<Uncaught TypeError: document.getElementsByClassName(...).方法名is not a function
 
   ```html
   // 解决方法:

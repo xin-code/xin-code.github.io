@@ -107,7 +107,7 @@ star: false
 
 ## 数组
 
-> <font color='blue'>不改变</font>原数组
+> 不改变原数组
 
 1. concat：连接数组，并且返回`新`数组
 
@@ -180,7 +180,7 @@ star: false
    arr.valueOf()     // [1, 2, 3]
    ```
 
-9. slice：用于<font color='red'>截取</font>原数组的一部分，返回一个新数组
+9. slice：用于截取原数组的一部分，返回一个新数组
 
    ```javascript
    arr.slice([begin[, end]])
@@ -202,7 +202,7 @@ star: false
    
 
 
-> <font color='red'>改变</font>原数组
+> 改变原数组
 
 1. push：向数组末尾新增一个元素，并返回数组长度
 
@@ -259,7 +259,7 @@ star: false
    arr.sort((a,b)=>{return b.age-a.age})	// b-a 为从大到小排序 33,20,18
    ```
 
-7. :star: splice：通过删除或替换现有元素或者原地添加新的元素来修改<font color='red'>原</font>数组
+7. :star: splice：通过删除或替换现有元素或者原地添加新的元素来修改原数组
 
    ```javascript
    array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
