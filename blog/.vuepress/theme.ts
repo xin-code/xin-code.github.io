@@ -63,7 +63,9 @@ export default hopeTheme({
       repo: "xin-code/giscus-discussions",
       repoId: "R_kgDOHpRX5A",
       category: "Announcements",
-      categoryId: "DIC_kwDOHpRX5M4CQK5G",
+      categoryId: "DIC_kwDOHpRX5M4CQK5F",
+      mapping: "title",
+      inputPosition: "top",
 
       /**
        * Using Twikoo
