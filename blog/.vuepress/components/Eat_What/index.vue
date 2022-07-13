@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button @click="onSelectFood">
+    <el-button @click="onSelectFood" type="danger">
       吃什么
     </el-button>
     <span class="food" :key="new Date().getTime()">
