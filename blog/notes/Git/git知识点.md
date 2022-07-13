@@ -113,3 +113,28 @@ git rebase test
   ```
 
   
+
+
+
+## 统一Git提交的用户名/邮箱
+
+- 可以新建一个文件`modify_author.sh` 用git bash 打开 并运行`$ ./modify_author.sh`
+
+```Git
+  #!/bin/bash 
+
+ git filter-branch  --force --env-filter ' 
+     #如果Git用户名等于老的Git用户名 wangshuyin
+     if [ "$GIT_COMMITTER_NAME" = "zxg" ] || [ "$GIT_AUTHOR_EMAIL" = "975203723@qq.com" ]; 
+     then 
+        #替换用户名为新的用户名，替换邮箱为正确的邮箱
+        GIT_AUTHOR_NAME="Xin"; 
+        GIT_AUTHOR_EMAIL="975203723@qq.com"; 
+
+        #替换提交的用户名为新的用户名，替换提交的邮箱为正确的邮箱
+        GIT_COMMITTER_NAME="Xin"; 
+        GIT_COMMITTER_EMAIL="975203723@qq.com"; 
+     fi 
+ '  --tag-name-filter cat -- --branches --tags
+```
+
