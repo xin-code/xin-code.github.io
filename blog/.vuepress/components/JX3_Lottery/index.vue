@@ -114,7 +114,6 @@ export default {
     endCallback (prize) {
       // 抽奖结束后的回调
       this.trigger.push(prize)
-      
       this.prizeVisible = true
     },
   }
