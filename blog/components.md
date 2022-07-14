@@ -4,7 +4,7 @@ icon: config
 title: 组件库
 heroImage: /logo.svg
 heroText: 组件库
-tagline: 基于 Element-UI 制作的个自用组件
+tagline: 基于 Element-UI 制作的自用组件
 actions:
   - text: 文章 📔
     link: /notes/Vue/Vue2.md/
