@@ -90,24 +90,12 @@ export default {
     onClickStart (e, btn) {
       // 清除抽奖结果
       this.trigger = []
-
-      if(btn.fonts[0].text == '单次碰瓷'){
-        // 开始碰瓷
-        this.$refs.myLucky.play()
-        setTimeout(_ => {
-          // 停止碰瓷
-          this.$refs.myLucky.stop()
-          }, Math.random()*1000)
-        
-      }else{
-        // 开始碰瓷
-        this.$refs.myLucky.play()
-        setTimeout(_ => {
-          // 停止碰瓷
-          this.$refs.myLucky.stop()
-        }, Math.random()*1000)
-
-      }
+      // 开始碰瓷
+      this.$refs.myLucky.play()
+      setTimeout(_ => {
+        // 停止碰瓷
+        this.$refs.myLucky.stop()
+      }, Math.random()*1000)
     },
 
     // 碰瓷结束会触发end回调
