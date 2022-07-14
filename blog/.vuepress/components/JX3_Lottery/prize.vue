@@ -1,10 +1,10 @@
 <template>
   <el-dialog
-    title="触发奇遇"
+    :title="title"
     v-model="visible"
     :close-on-click-modal="false"
     :close-on-press-escape="false"
-    append-to-body
+    style="z-index:9999"
     center
     width="800px"
   >
@@ -38,6 +38,7 @@
 export default {
   data() {
     return {
+      title: "触发奇遇"
     };
   },
   props: {
@@ -51,12 +52,13 @@ export default {
     },
   },
   methods: {
-    async save () {
-      this.$emit('update:visible', false)
-    },
-    
     close () {
       this.$emit('update:visible', false)
+    },
+
+    async onClickAgain () {
+      this.$emit('update:visible', false)
+      this.$emit('onClickAgain')
     },
   },
 
