@@ -69,19 +69,19 @@ export default {
       ],
       buttons: [
         {
-        x: 4, y: 5, col: 1,
+        x: 4, y: 5, col: 2,
         background: '#e9e8fe',
-        fonts: [{ text: '单次碰瓷', top: '40%' }],
+        fonts: [{ text: '开始碰瓷', top: '40%' }],
         callback: function () {
         }
       },
-      {
-        x: 5, y: 5, col: 1,
-        background: '#e9e8fe',
-        fonts: [{ text: '十连碰瓷', top: '40%' }],
-        callback: function () {
-        }
-      },
+      // {
+      //   x: 5, y: 5, col: 1,
+      //   background: '#e9e8fe',
+      //   fonts: [{ text: '十连碰瓷', top: '40%' }],
+      //   callback: function () {
+      //   }
+      // },
       ],
     }
   },
