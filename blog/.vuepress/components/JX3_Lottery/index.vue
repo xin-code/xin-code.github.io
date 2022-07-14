@@ -104,7 +104,7 @@ export default {
         this.$refs.myLucky.play()
         setTimeout(_ => {
           // 停止碰瓷
-          await this.$refs.myLucky.stop()
+          this.$refs.myLucky.stop()
         }, Math.random()*1000)
 
       }
