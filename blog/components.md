@@ -15,14 +15,19 @@ actions:
 
 features:
   - title: 吃什么
-    icon: markdown
+    icon: plugin
     details: 适用于选择困难症
     link: /tools/Eat_What.md/
 
   - title: 组合Input&Select
-    icon: markdown
+    icon: plugin
     details: 组合Input&Select
     link: /tools/Inpuit_Select.md/
+
+  - title: 剑三奇遇抽奖
+    icon: tool
+    details: 总得触发点什么吧
+    link: /tools/JX3_Lottery.md/
 
 copyright: false
 footer: 努力并奋斗着

@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@element-plus/icons-vue': ^2.0.6
+  '@lucky-canvas/vue': ^0.1.11
   '@vuepress/client': ^2.0.0-beta.49
   '@vuepress/plugin-docsearch': ^2.0.0-beta.49
   element-plus: ^2.2.9
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@element-plus/icons-vue': 2.0.6_vue@3.2.37
+  '@lucky-canvas/vue': 0.1.11_vue@3.2.37
   element-plus: 2.2.9_vue@3.2.37
 
 devDependencies:
@@ -1392,6 +1394,20 @@ packages:
     resolution: {integrity: sha512-ukelZ49tzUqgOAEbVujl/U62JNK3wdn5kKtXVqrjKND4QvHACZOMOYaZI6/5Jd8vsg+Fq9HDwiib70FBLydOiQ==}
     dev: true
 
+  /@lucky-canvas/vue/0.1.11_vue@3.2.37:
+    resolution: {integrity: sha512-5vm0txSKRBtMgrE/HZEvw1joSTx9NTdAkc8tBp/aX0LxyhQtiTVBLsRgdYUK/OiURCL8bo+046BTGnV+Q4JFlg==}
+    peerDependencies:
+      vue: ^2.0.0 || >=3.0.0-rc.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@vue/composition-api': 1.7.0_vue@3.2.37
+      lucky-canvas: 1.7.25
+      vue: 3.2.37
+      vue-demi: 0.7.5_db599cb88588e34e2c0664a7b38360dc
+    dev: false
+
   /@mdit-vue/plugin-component/0.6.0:
     resolution: {integrity: sha512-S/Dd0eoOipbUAMdJ6A7M20dDizJxbtGAcL6T1iiJ0cEzjTrHP1kRT421+JMGPL8gcdsrIxgVSW8bI/R6laqBtA==}
     dependencies:
@@ -1677,6 +1693,14 @@ packages:
       '@vue/compiler-dom': 3.2.37
       '@vue/shared': 3.2.37
     dev: true
+
+  /@vue/composition-api/1.7.0_vue@3.2.37:
+    resolution: {integrity: sha512-hxOgLYR+wjuPX9bkP2pAPlqUs98XxBoa9DSLyp1z6+YR92wC42PZcZKs4d+VRtcv4udOv041Kss+F6ap5nj8YA==}
+    peerDependencies:
+      vue: '>= 2.5 < 2.7'
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /@vue/devtools-api/6.2.0:
     resolution: {integrity: sha512-pF1G4wky+hkifDiZSWn8xfuLOJI1ZXtuambpBEYaf7Xaf6zC/pM29rvAGpd3qaGXnr4BAXU1Pxz/VfvBGwexGA==}
@@ -3905,6 +3929,10 @@ packages:
       is-unicode-supported: 0.1.0
     dev: true
 
+  /lucky-canvas/1.7.25:
+    resolution: {integrity: sha512-ZB/ifYmgjdriAaH9vtigfY1zBy0TDxTVuELgElTGUm7k+YYLW8yMI6uJZiy2wpKxRsXyN4uaSX1HbD1XkIitJg==}
+    dev: false
+
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -4705,6 +4733,21 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
+
+  /vue-demi/0.7.5_db599cb88588e34e2c0664a7b38360dc:
+    resolution: {integrity: sha512-eFSQSvbQdY7C9ujOzvM6tn7XxwLjn0VQDXQsiYBLBwf28Na+2nTQR4BBBcomhmdP6mmHlBKAwarq6a0BPG87hQ==}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-beta.1
+      vue: ^2.6.0 || >=3.0.0-rc.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@vue/composition-api': 1.7.0_vue@3.2.37
+      vue: 3.2.37
+    dev: false
 
   /vue-router/4.1.2_vue@3.2.37:
     resolution: {integrity: sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==}
