@@ -3,6 +3,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'  // 引入 Elemen
 import ElementPlus from 'element-plus' // 引入 element-plus
 import 'element-plus/dist/index.css' // 导入 element-plus 的 css
 import VueLuckyCanvas from '@lucky-canvas/vue' // 引入抽奖组件
+import './styles/font.scss' // 全局引入JX3字体
 
 // 自用组件
 import Eat_What from './components/Eat_What/index.vue'  // 吃什么

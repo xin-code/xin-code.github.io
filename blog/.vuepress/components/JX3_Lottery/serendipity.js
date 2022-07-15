@@ -1,0 +1,41 @@
+export const serendipities = [
+  // 绝世奇遇
+  { range: 0.1, name: '济苍生', img: 'picture/济苍生.webp' },
+  { range: 0.1, name: '流年如虹', img: 'picture/流年如虹.webp' },
+  { range: 0.1, name: '千秋铸', img: 'picture/千秋铸.webp' },
+  { range: 0.1, name: '塞外宝驹', img: 'picture/塞外宝驹.webp' },
+  { range: 0.1, name: '三尺青锋', img: 'picture/三尺青锋.webp' },
+  { range: 0.1, name: '三山四海', img: 'picture/三山四海.webp' },
+  { range: 0.1, name: '兔江湖', img: 'picture/兔江湖.webp' },
+  { range: 0.1, name: '万灵当歌', img: 'picture/万灵当歌.webp' },
+  { range: 0.1, name: '侠行囧途', img: 'picture/侠行囧途.webp' },
+  { range: 0.1, name: '侠行囧途', img: 'picture/侠行囧途.webp' },
+  { range: 0.1, name: '阴阳两界', img: 'picture/阴阳两界.webp' },
+
+  // 普通奇遇
+  { range: 1, name: '白日梦', img: 'picture/白日梦.webp' },
+  { range: 1, name: '茶馆奇缘', img: 'picture/茶馆奇缘.webp' },
+  { range: 1, name: '度人心', img: 'picture/度人心.webp' },
+  { range: 1, name: '扶摇九天', img: 'picture/扶摇九天.webp' },
+  { range: 1, name: '故园风雨', img: 'picture/故园风雨.webp' },
+  { range: 1, name: '黑白路', img: 'picture/黑白路.webp' },
+  { range: 1, name: '虎啸山林', img: 'picture/虎啸山林.webp' },
+  { range: 1, name: '护佑苍生', img: 'picture/护佑苍生.webp' },
+  { range: 1, name: '旧宴承欢', img: 'picture/旧宴承欢.webp' },
+  { range: 1, name: '炼狱厨神', img: 'picture/炼狱厨神.webp' },
+  { range: 1, name: '凌云梯', img: 'picture/凌云梯.webp' },
+  { range: 1, name: '乱世舞姬', img: 'picture/乱世舞姬.webp' },
+  { range: 1, name: '平生心愿', img: 'picture/平生心愿.webp' },
+  { range: 1, name: '清风捕王', img: 'picture/清风捕王.webp' },
+  { range: 1, name: '劝学记', img: 'picture/劝学记.webp' },
+  { range: 1, name: '韶华故', img: 'picture/韶华故.webp' },
+  { range: 1, name: '少年行', img: 'picture/少年行.webp' },
+  { range: 1, name: '生死判', img: 'picture/生死判.webp' },
+  { range: 1, name: '天涯无归', img: 'picture/天涯无归.webp' },
+  { range: 1, name: '舞众生', img: 'picture/舞众生.webp' },
+  { range: 1, name: '惜往日', img: 'picture/惜往日.webp' },
+  { range: 1, name: '雪山恩仇', img: 'picture/雪山恩仇.webp' },
+
+  // 未触发
+  { range: 0, name: '再接再厉', img: 'picture/再接再厉.webp' },
+]

@@ -5,6 +5,7 @@
     :close-on-click-modal="false"
     :close-on-press-escape="false"
     style="z-index:9999"
+    custom-class="jx3_dialog"
     center
     width="800px"
   >
@@ -12,8 +13,9 @@
       class="dialog-body"
       v-if="visible"
     >
-    <div v-for="item in trigger" class="center">
-      <img :src="item.imgs[0].src">
+    <div class="center inkCircle">
+      <img :src="trigger[0].src">
+      <div class="text">{{text}}</div>
     </div>
     </div>
     <div
@@ -25,8 +27,7 @@
       </el-button>
       <el-button
         type="primary"
-        @click="onClickAgain"
-      >
+        @click="onClickAgain">
         再抽一次
       </el-button>
     </div>
@@ -38,7 +39,8 @@
 export default {
   data() {
     return {
-      title: "触发奇遇"
+      title: "",
+      text: ""
     };
   },
   props: {
@@ -51,6 +53,20 @@ export default {
       default: ()=>[]
     },
   },
+  watch: {
+    visible: {
+      handler(val) {
+        if (val) {
+          this.text = "开启奇遇"
+          // 延迟变换字体
+          setTimeout(()=>{
+            this.text = this.trigger[0].text
+          },888)
+        }
+      },
+      immediate: true,
+    },
+  },
   methods: {
     close () {
       this.$emit('update:visible', false)
@@ -61,17 +77,35 @@ export default {
       this.$emit('onClickAgain')
     },
   },
-
-  watch: {
-  },
 }
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+.inkCircle {
+  background: url("../../public/InkCircle.png") no-repeat;
+  background-position: center;
+  background-size: 450px 458px;
+  text-align: center;
+}
+img {
+  width: 402.5px;
+  margin-left: 15px;
+  margin-top: 30px;
+}
 .center {
   text-align: center;
 }
 .dialog-footer {
   margin-top: 20px;
+}
+.text {
+  margin-top: -15px;
+  font-family: "jx3";
+  font-size: 45px;
+  font-weight: 200;
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  background-image: linear-gradient(#fff26c, gold);
 }
 </style>
