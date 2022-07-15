@@ -36,8 +36,10 @@ export default {
       buttons: [
         {
         x: 4, y: 5, col: 2,
-        background: '#e9e8fe',
-        fonts: [{ text: '开始碰瓷', top: '40%' }],
+        background: '#FFF',
+        fonts: [{ text: '开始碰瓷', top: '20%',fontStyle:"jx3",fontColor:"#fff26c",fontSize:"40px" }],
+        },
+        {
         callback: function () {
         }
       },
