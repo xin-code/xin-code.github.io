@@ -9,7 +9,7 @@ export const serendipities = [
   { range: 0.1, name: '兔江湖', img: 'picture/兔江湖.webp' },
   { range: 0.1, name: '万灵当歌', img: 'picture/万灵当歌.webp' },
   { range: 0.1, name: '侠行囧途', img: 'picture/侠行囧途.webp' },
-  { range: 0.1, name: '侠行囧途', img: 'picture/侠行囧途.webp' },
+  { range: 0.1, name: '争铸吴钩', img: 'picture/争铸吴钩.webp' },
   { range: 0.1, name: '阴阳两界', img: 'picture/阴阳两界.webp' },
 
   // 普通奇遇
