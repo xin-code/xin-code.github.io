@@ -89,7 +89,7 @@ export default {
 }
 img {
   width: 402.5px;
-  margin-left: 15px;
+  margin-left: 20px;
   margin-top: 30px;
 }
 .center {
