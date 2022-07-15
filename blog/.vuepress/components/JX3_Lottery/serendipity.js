@@ -37,5 +37,5 @@ export const serendipities = [
   { range: 1, name: '雪山恩仇', img: 'picture/雪山恩仇.webp' },
 
   // 未触发
-  { range: 0, name: '再接再厉', img: 'picture/再接再厉.webp' },
+  { range: 20, name: '再接再厉', img: 'picture/再接再厉.webp' },
 ]
