@@ -93,8 +93,7 @@ export default {
       setTimeout(_ => {
         // 停止碰瓷
         this.$refs.myLucky.stop()
-      // }, Math.random()*1000)
-      }, Math.random()*100)
+      }, Math.random()*1000)
     },
 
     // 碰瓷结束会触发end回调
