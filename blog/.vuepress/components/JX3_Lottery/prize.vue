@@ -1,10 +1,10 @@
 <template>
+  <div>
   <el-dialog
     :title="title"
     v-model="visible"
     :close-on-click-modal="false"
     :close-on-press-escape="false"
-    style="z-index:9999"
     custom-class="jx3_dialog"
     center
     width="800px"
@@ -32,6 +32,7 @@
       </el-button>
     </div>
   </el-dialog>
+  </div>
 </template>
 
 <script>

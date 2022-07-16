@@ -12,6 +12,7 @@
       @start="onClickStart"
       @end="endCallback"
     />
+    <div class="hotfix" @click="hotfixDialog">不显示水墨圈圈 点我</div>
     <Prize v-model:visible="prizeVisible" :trigger="trigger" @onClickAgain="onClickStart" />
   </div>
 </template>
@@ -88,6 +89,7 @@ export default {
     },
     // 点击抽奖按钮会触发star回调
     onClickStart (e, btn) {
+      console.log('Lottery start')
       // 清除抽奖结果
       this.trigger = []
       // 开始碰瓷
@@ -95,17 +97,28 @@ export default {
       setTimeout(_ => {
         // 停止碰瓷
         this.$refs.myLucky.stop()
+        console.log('Lottery end')
       }, Math.random()*1000)
     },
 
     // 碰瓷结束会触发end回调
     endCallback (prize) {
+      console.log('debug')
       // 抽奖结束后的回调
       this.trigger.push({
         src: prize.imgs[0].src,
         text:prize.fonts[0].text
       })
       this.prizeVisible = true
+    },
+
+    hotfixDialog(){
+     this.trigger = []
+     this.trigger.push({ 
+        "src": "https://github.91chi.fun/https://raw.githubusercontent.com/xin-code/xin-code.github.io/main/blog/.vuepress/components/JX3_Lottery/picture/再接再厉.webp", 
+        "text": "再接再厉" 
+      })
+       this.prizeVisible = true
     },
   },
   mounted(){
@@ -116,4 +129,13 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
+.hotfix {
+  font-family: "jx3";
+  font-size: 45px;
+  font-weight: 200;
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  background-image: linear-gradient(#fff26c, gold);
+}
 </style>
