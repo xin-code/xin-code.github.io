@@ -12,7 +12,7 @@
       @start="onClickStart"
       @end="endCallback"
     />
-    <div class="hotfix" @click="hotfixDialog">不显示水墨圈圈 点我</div>
+    <div class="hotfix" @click="hotfixDialog" v-if="false">不显示水墨圈圈 点我</div>
     <Prize v-model:visible="prizeVisible" :trigger="trigger" @onClickAgain="onClickStart" />
   </div>
 </template>
