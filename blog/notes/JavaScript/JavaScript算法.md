@@ -50,6 +50,41 @@ console.log(newArr)
 
 
 
+## 对象变数组
+
+```javascript
+let data = {
+    '张三':{age:10,sex:'男'},
+    '李四':{age:12,sex:'女'}
+}
+
+let Array = Object.keys(data).map(key => {
+    return {
+        name:key,
+        ...data[key]
+    }
+})
+
+console.log(Array)
+// 变为下列的数组
+[
+    {
+        "name": "张三",
+        "age": 10,
+        "sex": "男"
+    },
+    {
+        "name": "李四",
+        "age": 12,
+        "sex": "女"
+    }
+]
+```
+
+
+
+
+
 ## 定时器
 
 - SetTimeOut()
