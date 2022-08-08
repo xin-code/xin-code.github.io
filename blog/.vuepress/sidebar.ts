@@ -48,7 +48,7 @@ export default sidebar([
         text: "其他",
         collapsable: true,
         prefix: "Other/",
-        children: ["青龙面板", "服务器命令", "阿里云验证码", "一些地址"],
+        children: ["青龙面板", "服务器命令", "阿里云验证码", "一些地址", "Chrome多版本共存"],
       },
       {
         text: "面试",
