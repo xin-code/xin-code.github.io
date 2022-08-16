@@ -48,8 +48,21 @@ export default hopeTheme({
   // },
 
   plugins: {
+    // Markdown文档增强
+    mdEnhance: {
+      // 开启全部
+      // enableAll: true,
+      // Echarts图表支持
+      echarts: true,
+      // 代码演示
+      demo: true,
+    },
     blog: {
       autoExcerpt: true,
+    },
+    // 复制代码
+    copyCode: {
+      showInMobile: true
     },
 
     // 如果你不需要评论，可以直接删除 comment 配置，
@@ -78,13 +91,6 @@ export default hopeTheme({
        */
       // provider: "Waline",
       // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
-    },
-
-    mdEnhance: {
-      enableAll: true,
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
     },
   },
 });

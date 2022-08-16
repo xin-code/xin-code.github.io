@@ -15,6 +15,25 @@ export default sidebar([
         children: ["Vue2"],
       },
       {
+        text: "Echarts",
+        collapsable: true,
+        prefix: "Echarts/",
+        children: [
+          {
+            text: "柱状图",
+            collapsable: true,
+            prefix: "Bar/",
+            children: ["柱状图"],
+          },
+          {
+            text: "折线图",
+            collapsable: true,
+            prefix: "Line/",
+            children: ["折线图"],
+          },
+        ],
+      },
+      {
         text: "JavaScript",
         collapsable: true,
         prefix: "JavaScript/",
