@@ -14,7 +14,23 @@ star: false
 
 <!-- more -->
 
+## 布尔值
 
+- 0 - false
+
+  ```javascript
+  Boolean(0)
+  -> false
+  ```
+
+- 1 - true
+
+  ```javascript
+  Boolean(1)
+  -> true
+  ```
+
+  
 
 
 ## 字符串
