@@ -4,7 +4,7 @@ import theme from "./theme";
 
 export default defineUserConfig({
   locales: {
-    "/zh/": {
+    "/": {
       lang: "zh-CN",
     },
   },
@@ -23,7 +23,7 @@ export default defineUserConfig({
       apiKey: "9faae5485c99db9f3560dec613cff0f9",
       indexName: "xin-codeio",
       locales: {
-        "/zh/": {
+        "/": {
           placeholder: "搜索文档",
           translations: {
             button: {
