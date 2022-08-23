@@ -1,0 +1,57 @@
+---
+title: Vue转Exe桌面应用
+icon: page
+date: 2022-08-23 10:17:01
+category:
+  - Vue
+tag:
+  - Vue
+sticky: false
+star: false
+---
+
+通过`electron-quick-start`打包生成EXE可执行文件
+
+<!-- more -->
+
+
+
+## 安装`electron-quick-start`
+
+```git
+git clone https://github.com/electron/electron-quick-start
+npm i
+```
+
+![electron-quick-start_NPM.png](https://s2.loli.net/2022/08/23/DP847mnVx3Cphsq.png)
+
+
+
+## 安装依赖`electron-packager`
+
+```git
+npm install electron-packager --save-dev
+```
+
+![electron-packager.png](https://s2.loli.net/2022/08/23/DL9Th1MHyvjlBom.png)
+
+## 配置`package.json`
+
+```json
+"scripts": {
+    "start": "electron .",
+    "packager": "electron-packager ./ App --platform=win32 --arch=x64 --overwrite"
+  },
+```
+
+
+
+## 打包
+
+- 打包出vue-code
+
+- vue-code中文件全选>复制>X:\electron-quick-start
+
+- 打开X:\electron-quick-start 终端 npm run packager
+
+- X:\electron-quick-start下出现App-win32-x64  整个复制发出（内App.exe即为单击文件，可创建快捷方式至桌面）
