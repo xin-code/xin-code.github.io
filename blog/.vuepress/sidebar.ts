@@ -12,7 +12,7 @@ export default sidebar([
         text: "Vue",
         collapsable: true,
         prefix: "Vue/",
-        children: ["Vue2"],
+        children: ["Vue2","Vue转Exe桌面应用"],
       },
       {
         text: "Echarts",
@@ -56,6 +56,12 @@ export default sidebar([
         collapsable: true,
         prefix: "Git/",
         children: ["git知识点"],
+      },
+      {
+        text: "Npm",
+        collapsable: true,
+        prefix: "Npm/",
+        children: ["基本知识"],
       },
       {
         text: "Hexo",
