@@ -14,7 +14,19 @@ star: false
 
 <!-- more -->
 
+- white-space
 
+  css中white-space属性用来控制容器的文本中带有空白符、制表符、换行符等的显示
+
+  ```css
+  .cell {
+      white-space: pre-line;
+  }
+  
+  遇到`\n`的时候会自动换行
+  ```
+
+  
 
 - 鼠标样式
 
