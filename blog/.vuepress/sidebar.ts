@@ -12,26 +12,13 @@ export default sidebar([
         text: "Vue",
         collapsable: true,
         prefix: "Vue/",
-        children: ["Vue2","Vue转Exe桌面应用"],
+        children: ["Vue2", "Vue转Exe桌面应用"],
       },
       {
         text: "Echarts",
         collapsable: true,
         prefix: "Echarts/",
-        children: [
-          {
-            text: "柱状图",
-            collapsable: true,
-            prefix: "Bar/",
-            children: ["柱状图"],
-          },
-          {
-            text: "折线图",
-            collapsable: true,
-            prefix: "Line/",
-            children: ["折线图"],
-          },
-        ],
+        children: ["柱状图", "折线图"],
       },
       {
         text: "JavaScript",
