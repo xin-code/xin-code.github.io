@@ -294,6 +294,27 @@ star: false
 
 
 
+- `findIndex`
+
+  根据数组对象中的某一id，查找所在位置
+
+  ```javascript
+  let arr = [
+      {name:'张三',age:'13'},
+      {name:'李四',age:'11'},
+      {name:'王五',age:'22'},
+  ]
+  
+  let index = arr.findIndex(x=>x.name == '王五')
+  
+  console.log(index)
+  // 2 
+  ```
+
+  
+
+
+
 ## 辨析for in 与 for of 的区别
 
 - 定义数组&对象
