@@ -357,7 +357,7 @@ for (let i in obj) {
 
 
 
-## New Date().format("yyyy-MM-dd") 提示Format Is Not A Function的解决办法
+## new Date().Format("yyyy-MM-dd") 提示Format is not a function的解决办法
 
 ```javascript
 new Date().toLocaleDateString().split('/').join('-');
