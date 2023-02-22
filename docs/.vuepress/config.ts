@@ -1,12 +1,12 @@
 /**
  * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
-import { resolve } from 'path'
-import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
-import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
-import dayjs from 'dayjs'
-import baiduCode from './config/baiduCode' // 百度统计hm码
-import htmlModules from './config/htmlModules' // 自定义插入的html块
+import { resolve } from 'path';
+import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config';
+import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types';
+import dayjs from 'dayjs';
+import baiduCode from './config/baiduCode'; // 百度统计hm码
+import htmlModules from './config/htmlModules'; // 自定义插入的html块
 
 // const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
 // const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
@@ -18,9 +18,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "前端札记",
+      title: '前端札记',
       description: '个人博客',
-    }
+    },
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
@@ -78,7 +78,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     bodyBgImg: [
       'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175828.jpeg',
       'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
-      'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
+      'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
     bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~1.0, 默认0.5
     bodyBgImgInterval: 60, // body多张背景图时的切换间隔, 默认15，单位s
@@ -141,16 +141,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 页脚信息
     footer: {
       createYear: 2021, // 博客创建年份
-      copyrightInfo:
-        '', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+      copyrightInfo: '', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
         name: 'Xin',
-        link: 'https://github.com/xin-code'
-      }
+        link: 'https://github.com/xin-code',
+      },
     },
 
     // 自定义hmtl(广告)模块
@@ -164,7 +163,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        content:
+          '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
       },
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
@@ -178,7 +178,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   },
     // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
   ],
-
 
   // 插件配置
   plugins: <UserPlugins>[
@@ -228,13 +227,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           //   frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
           // },
         ],
-      }
+      },
     ],
 
     [
       'one-click-copy', // 代码块复制按钮
       {
-        copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+        copySelector: [
+          'div[class*="language-"] pre',
+          'div[class*="aside-code"] aside',
+        ], // String or Array
         copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
         showInMobile: false, // whether to display on the mobile side, default: false.
@@ -287,7 +289,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       '@vuepress/last-updated', // "上次更新"时间格式
       {
         transformer: (timestamp, lang) => {
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+          return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss');
         },
       },
     ],
@@ -299,8 +301,5 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   },
 
   // 监听文件变化并重新构建
-  extraWatchFiles: [
-    '.vuepress/config.ts',
-    '.vuepress/config/htmlModules.ts',
-  ]
-})
+  extraWatchFiles: ['.vuepress/config.ts', '.vuepress/config/htmlModules.ts'],
+});
