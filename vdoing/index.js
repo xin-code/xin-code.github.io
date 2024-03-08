@@ -70,7 +70,7 @@ module.exports = (options, ctx) => {
   const enableSmoothScroll = themeConfig.smoothScroll === true
 
   return {
-    alias() {
+    alias () {
       return {
         '@AlgoliaSearchBox': isAlgoliaSearch
           ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
@@ -173,22 +173,22 @@ module.exports = (options, ctx) => {
 
 
 // 渲染md容器的卡片列表
-function renderCardList(tokens, idx, type) {
+function renderCardList (tokens, idx, type) {
   const END_TYPE = `container_${type}_close`,
     _tokens$idx = tokens[idx],
     nesting = _tokens$idx.nesting,
-    info = _tokens$idx.info;
+    info = _tokens$idx.info
 
   if (nesting === 1) { // 渲染开头的 ':::' 标记
-    let yamlStr = '';
+    let yamlStr = ''
 
     for (let i = idx; i < tokens.length; i++) {
       let _tokens$i = tokens[i],
         type = _tokens$i.type,
         content = _tokens$i.content,
-        _info = _tokens$i.info;
-      if (type === END_TYPE) break; // 遇到结束的 ':::' 时
-      if (!content) continue;
+        _info = _tokens$i.info
+      if (type === END_TYPE) break // 遇到结束的 ':::' 时
+      if (!content) continue
       if (type === 'fence' && _info === 'yaml') { // 是代码块类型，并且是yaml代码
         yamlStr = content
       }
@@ -233,7 +233,7 @@ function renderCardList(tokens, idx, type) {
 
 
 // 将数据解析成DOM结构 - 普通卡片列表
-function getCardListDOM(dataList, row, config) {
+function getCardListDOM (dataList, row, config) {
   const { target = '_blank' } = config
   let listDOM = ''
   dataList.forEach(item => {
@@ -254,7 +254,7 @@ function getCardListDOM(dataList, row, config) {
 
 
 // 将数据解析成DOM结构 - 图文卡片列表
-function getCardImgListDOM(dataList, row, config) {
+function getCardImgListDOM (dataList, row, config) {
   const { imgHeight = 'auto', objectFit = 'cover', lineClamp = 1, target = '_blank' } = config
 
   let listDOM = ''
@@ -282,11 +282,11 @@ function getCardImgListDOM(dataList, row, config) {
 }
 
 // 添加base路径
-function withBase(path) {
-  if (!path) return '';
+function withBase (path) {
+  if (!path) return ''
   if (base && path.charAt(0) === '/') {
-    return base + path.slice(1);
+    return base + path.slice(1)
   } else {
-    return path;
+    return path
   }
 }
