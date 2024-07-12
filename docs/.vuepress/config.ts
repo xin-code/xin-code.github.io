@@ -290,7 +290,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         options: {
           clientID: 'Ov23limS0JM3RmbEZbNO',
           clientSecret: '75b5c93dbc2666fad1d6867af499445e36ddd9f6',
-          repo: 'xin-code/giscus-discussions', // GitHub 仓库
+          repo: 'giscus-discussions', // GitHub 仓库
           owner: 'xin-code', // GitHub仓库所有者
           admin: ['xin-code'], // 对仓库有写权限的人
           // distractionFreeMode: true,
