@@ -2,6 +2,7 @@
  * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
 import { resolve } from 'path';
+import nav from './config/nav';
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config';
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types';
 import dayjs from 'dayjs';
@@ -27,37 +28,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 主题配置
   themeConfig: {
     // 导航配置
-    nav:[
-      { text: '首页', link: '/' },
-      {
-        text: '笔记',
-        link: '/pages/3da6e0/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: '',
-            items: [{ text: '前端', link: '/pages/3da6e0/' }],
-          },
-          {
-            text: '',
-            items: [{ text: '服务器', link: '/pages/b1c010/' }],
-          },
-          {
-            text: '',
-            items: [{ text: '其他', link: '/pages/7d4b5c/' }],
-          },
-        ],
-      },
-      {
-        text: '索引',
-        link: '/categories/',
-        items: [
-          { text: '分类', link: '/categories/' },
-          { text: '归档', link: '/archives/' },
-          { text: '标签', link: '/tags/' },
-        ],
-      },
-    ],
+    nav,
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
     repo: 'https://github.com/xin-code', // 导航栏右侧生成Github链接
@@ -65,7 +36,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     docsBranch: 'main', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: false, // 启用编辑
+    editLinks: true, // 启用编辑
     editLinkText: '编辑',
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
@@ -97,7 +68,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
     bodyBgImgOpacity: 1, // body背景图透明度，选值 0.1~1.0, 默认0.5
     bodyBgImgInterval: 60, // body多张背景图时的切换间隔, 默认15，单位s
-    titleBadge: false, // 文章标题前的图标是否显示，默认true
+    titleBadge: true, // 文章标题前的图标是否显示，默认true
     // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
     //   '图标地址1',
     //   '图标地址2'
@@ -180,21 +151,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         name: 'keywords',
         content:
-        '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+          '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
       },
     ],
-    // ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js' }],
-    // [
-    //   'script',
-    //   {
-    //     'data-ad-client': 'ca-pub-7828333725993554',
-    //     async: 'async',
-    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-    //   },
-    // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
+    [
+      'script',
+      { src: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js' },
+    ],
   ],
 
   // 插件配置
@@ -261,19 +226,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    [
-      'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
-      {
-        settings: {
-          // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-          // cssLib: ['http://xxx'], // 在线示例中的css依赖
-          // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-          jsfiddle: false, // 是否显示 jsfiddle 链接
-          codepen: true, // 是否显示 codepen 链接
-          horizontal: false, // 是否展示为横向样式
-        },
-      },
-    ],
+    // [
+    //   'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    //   {
+    //     settings: {
+    //       // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
+    //       // cssLib: ['http://xxx'], // 在线示例中的css依赖
+    //       // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+    //       vue: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+    //       jsfiddle: true, // 是否显示 jsfiddle 链接
+    //       codepen: true, // 是否显示 codepen 链接
+    //       horizontal: false, // 是否展示为横向样式
+    //     },
+    //   },
+    // ],
+    ['demo-container'],
     [
       'vuepress-plugin-zooming', // 放大图片
       {
@@ -298,8 +265,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
           title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
           labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+          body: '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
         },
       },
     ],
@@ -311,7 +277,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-		"vuepress-plugin-smooth-scroll", //平滑滚动插件
+    'vuepress-plugin-smooth-scroll', //平滑滚动插件
   ],
 
   markdown: {
