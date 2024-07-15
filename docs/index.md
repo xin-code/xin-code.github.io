@@ -1,25 +1,26 @@
 ---
 home: true
 # heroImage: /img/web.png
-heroText: 前端札记
-tagline: Web前端技术博客，积跬步以至千里，致敬每个爱学习的你。
+heroText: Xin's blog
+tagline: 思危、思退、思变。
 # actionText: 立刻进入 →
 # actionLink: /pages/vue2/
 bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
-# features: # 可选的
-#   - title: 前端
-#     details: JavaScript、ES6、Vue框架等前端技术
-#     link: /web/ # 可选
-#     imgUrl: /img/web.png # 可选
-#   - title: 页面
-#     details: html(5)/css(3)，前端页面相关技术
-#     link: /ui/
-#     imgUrl: /img/ui.png
-#   - title: 技术
-#     details: 技术文档、教程、技巧、总结等文章
-#     link: /technology/
-#     imgUrl: /img/other.png
+features: # 可选的
+  - title: 前端
+    details: JavaScript、html(5)/css(3)等前端技术
+    link: /pages/javascript/ # 可选
+    imgUrl: /img/web.png # 可选
+  - title: UI
+    details: 用户研究、交互设计、界面设计等。
+    link: /pages/css/
+    imgUrl: /img/ui.png
+  - title: 技术
+    details: 计算机技术相关等文章
+    link: /pages/others/
+    imgUrl: /img/other.png
+
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: detailed
@@ -27,8 +28,8 @@ bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | no
 # hideRightBar: true # 是否隐藏右侧边栏
 ---
 
-<!-- 小熊猫 -->
-<!-- <img src="/img/panda-waving.png" class="panda no-zoom" style="width: 130px;height: 115px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
+<!-- 黄鸡大笑 -->
+<img src="/img/Laugh.gif" class="panda no-zoom" style="width: 30px;height: 30px;opacity: 0.5;margin-bottom: 0.5rem;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;">
 
 <!--
 ## 关于

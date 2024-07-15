@@ -13,8 +13,8 @@ import htmlModules from './config/htmlModules'; // 自定义插入的html块
 // const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-  theme: 'vdoing', // 使用npm主题包
-  // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+  // theme: 'vdoing', // 使用npm主题包
+  theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
   locales: {
     '/': {
@@ -46,28 +46,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     archive: true, // 是否打开归档功能，默认true
     // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
-    // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
+    pageStyle: 'card', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
     bodyBgImg: [
-      'https://s2.loli.net/2024/03/09/rdqEik1UHbBoOND.jpg',
-      'https://s2.loli.net/2024/03/09/lDKLJZvsbofjGdY.jpg',
-      'https://s2.loli.net/2024/03/09/rIlbLq6He2DZFX1.jpg',
-      'https://s2.loli.net/2024/03/09/RMG3DVmK9nTUgbz.jpg',
-      'https://s2.loli.net/2024/03/09/C1AjJc56onU2pTI.jpg',
-      'https://s2.loli.net/2024/03/09/pUgr6O9LGHfEZFv.jpg',
-      'https://s2.loli.net/2024/03/09/k9q6ztubGwrPFfo.jpg',
-      'https://s2.loli.net/2024/03/09/EmyUYbWr4wxQg5F.jpg',
-      'https://s2.loli.net/2024/03/09/XayADdHnZR5QoVL.jpg',
-      'https://s2.loli.net/2024/03/09/LtTCNkJsrlS6n52.png',
-      'https://s2.loli.net/2024/03/09/M1yRKBJt6c9CbmV.jpg',
-      'https://s2.loli.net/2024/03/09/CpIu2v63d7N9Fmf.jpg',
-      'https://s2.loli.net/2024/03/09/fQxgDZjWTSRMGnu.jpg',
-      'https://s2.loli.net/2024/03/09/Cz2NjvqQEsXPnlO.webp',
-      'https://s2.loli.net/2024/03/09/rte1BYGyDiA2glM.jpg',
-      'https://s2.loli.net/2024/03/09/dLRiuzMnB9OyPr2.jpg',
+      '/img/bg.jpeg'
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
-    bodyBgImgOpacity: 1, // body背景图透明度，选值 0.1~1.0, 默认0.5
-    bodyBgImgInterval: 60, // body多张背景图时的切换间隔, 默认15，单位s
+    bodyBgImgOpacity: 0.9, // body背景图透明度，选值 0.1~1.0, 默认0.5
+    // bodyBgImgInterval: 60, // body多张背景图时的切换间隔, 默认15，单位s
     titleBadge: true, // 文章标题前的图标是否显示，默认true
     // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
     //   '图标地址1',
