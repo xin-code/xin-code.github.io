@@ -208,6 +208,8 @@ export default {
       return htmlModules ? htmlModules.homeSidebarB : ''
     },
     showBanner() { // 当分页不在第一页时隐藏banner栏
+      // 改为不论在哪一页，都隐藏banner
+      return false
       return this.$route.query.p
         && this.$route.query.p != 1
         && (!this.homeData.postList || this.homeData.postList === 'detailed')
