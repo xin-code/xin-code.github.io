@@ -46,9 +46,11 @@ export default {
   computed: {
     categories() {
       if (this.length === 'all') {
-        return this.categoriesData
+        // 全部分类 展示效果修改为 文章数从大到小排列的顺序 
+        return this.categoriesData.sort((a,b)=>b.length - a.length)
       } else {
-        return this.categoriesData.slice(0, this.length)
+        // 文章分类 展示效果修改为 文章数从大到小排列的顺序 
+        return this.categoriesData.slice(0, this.length).sort((a,b)=>b.length - a.length)
       }
     }
   }
