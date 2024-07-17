@@ -143,7 +143,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'script',
       { src: 'https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js' },
     ],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js' }],
     [
       'script',
       { src: 'https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js' },
