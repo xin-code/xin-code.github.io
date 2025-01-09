@@ -26,6 +26,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "async-validator": "1.11.5"
+    "async-validator": "1.11.5",
+    "v-clipboard": "2.2.3"
   }
 }
