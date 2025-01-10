@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "async-validator": "1.11.5",
-    "v-clipboard": "2.2.3"
+    "katex": "^0.16.19",
+    "v-clipboard": "2.2.3",
+    "vue-katex": "^0.5.0"
   }
 }
