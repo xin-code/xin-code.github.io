@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x] # 升级到 Node.js 20
+        node-version: [20.x]
 
     steps:
       - name: Checkout
@@ -23,12 +23,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn' # 启用 Yarn 缓存，加速安装
+          # 移除 cache: 'yarn'，禁用缓存
       - name: Install and Build
         env:
           NODE_OPTIONS: --openssl-legacy-provider
         run: |
-          yarn install --frozen-lockfile # 使用 lockfile 确保一致性
+          yarn install # 移除 --frozen-lockfile，允许生成 yarn.lock
           yarn build
       - name: Deploy
         run: |
