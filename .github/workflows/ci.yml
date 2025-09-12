@@ -14,26 +14,29 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x] # 升级到 Node.js 20
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 # 更新到最新版本，v1 已过时
+        uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4 # 更新到最新版本，v1 已过时
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Build-and-deploy
+          cache: 'yarn' # 启用 Yarn 缓存，加速安装
+      - name: Install and Build
         env:
-          NODE_OPTIONS: --openssl-legacy-provider # 直接在步骤的 env 块中设置
+          NODE_OPTIONS: --openssl-legacy-provider
+        run: |
+          yarn install --frozen-lockfile # 使用 lockfile 确保一致性
+          yarn build
+      - name: Deploy
         run: |
           remote_addr=`git remote get-url --push origin`
           commit_info=`git describe --all --always --long`
           user_name=`git log -1 --pretty=format:'%an'`
           user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=gh-pages
-          yarn
-          yarn build # NODE_OPTIONS 由 env 块生效，无需 $GITHUB_ENV
           cd docs/.vuepress/dist
           git config --global init.defaultBranch $deploy_branch
           git init
